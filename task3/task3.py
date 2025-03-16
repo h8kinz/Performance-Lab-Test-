@@ -18,9 +18,7 @@ test = json.load(open(m))
 dct = {}
 for el in value["values"]:
     dct[el["id"]] = el["value"]
-print(dct)
 for el in test["tests"]:
     update(el)
-print(test)
 with open(z, "w") as outfile:
     outfile.write(json.dumps(test, indent = 2))
